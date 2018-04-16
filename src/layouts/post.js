@@ -31,7 +31,7 @@ export default function Template({
       />
       <Wrapper is="main">
         <Box is="header" mb={4}>
-          <Text is="h1" largeSize="true" maxWidth={0}>
+          <Text is="h1" largeSize="true" maxWidth={0} mb={0}>
             {frontmatter.title}
           </Text>
           <Text fadeColor="true" maxWidth={0}>

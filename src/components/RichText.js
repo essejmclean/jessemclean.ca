@@ -70,11 +70,20 @@ const RichText = Text.extend`
     margin-bottom: ${props => props.theme.space[3]}px;
     margin-left: ${props => props.theme.space[3]}px;
     padding-left: ${props => props.theme.space[3]}px;
+    @media only screen and (max-width: 40em) {
+      margin-left: ${props => props.theme.space[0]}px;
+    }
   }
 
   .gatsby-resp-image-link {
     margin-top: ${props => props.theme.space[3]}px;
     margin-bottom: ${props => props.theme.space[3]}px;
+    @media only screen and (max-width: 40em) {
+      /* margin-top: ${props => props.theme.space[2]}px; */
+      margin-right: -${props => props.theme.space[3]}px;
+      /* margin-bottom: ${props => props.theme.space[2]}px; */
+      margin-left: -${props => props.theme.space[3]}px;
+    }
   }
 `
 

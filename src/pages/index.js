@@ -17,7 +17,7 @@ const IndexPage = ({
   return (
     <div style={transition && transition.style}>
       <Wrapper>
-        <Text maxWidth={0}>
+        <Text largeSize="true">
           <Link to="/">Jesse McLean</Link>
           &nbsp;is a designer and front-end developer, and co-founder of{' '}
           <a href="https://fieldmedialab.com" target="_blank">
