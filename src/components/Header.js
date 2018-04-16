@@ -4,7 +4,7 @@ import Wrapper from './Wrapper'
 import Text from './Text'
 
 const Header = ({ siteTitle }) => (
-  <Wrapper is="header" my={[3, null, 4]}>
+  <Wrapper is="header" my={4}>
     <Text is="span">
       <Link to="/">JM</Link>
     </Text>

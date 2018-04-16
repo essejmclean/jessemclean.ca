@@ -33,7 +33,7 @@ const Item = props => (
 
 const Footer = () => (
   <Wrapper is="footer" my={0}>
-    <Container>
+    <Container pb={3}>
       <Connect mr={3} mb={3}>
         <Item children="Twitter" link="http://twitter.com/essejmclean" />
         <Item children="Instagram" link="http://instagram.com/essejmclean" />

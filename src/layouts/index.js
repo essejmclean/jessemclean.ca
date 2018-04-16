@@ -2,10 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectGlobal, ThemeProvider } from 'styled-components'
-import { normalize } from 'polished'
+import { normalize, readableColor, shade } from 'polished'
 import theme from '../theme'
+import { Box } from 'rebass'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+
+const setBody = () => {
+  let time = new Date().getHours()
+  let color = '#fff'
+  if (time < 12) {
+    color = shade(1 - (12 - time) / 12, color)
+  }
+  if (time >= 12) {
+    color = shade(1 - (time - 12) / 12, color)
+  }
+  theme.background = color
+  theme.colors.text = readableColor(color)
+  return color
+}
 
 injectGlobal`
   ${normalize()};
@@ -22,43 +37,53 @@ injectGlobal`
     font-kerning: normal;
   }
   html { font: 100%/1.5 system-ui,-apple-system,BlinkMacSystemFont,SF UI,Helvetica Neue,sans-serif; }
+  body {
+    background-color: ${setBody()};
+  }
 `
 
-const Layout = ({ children, data }) => (
-  <ThemeProvider theme={theme}>
-    <div>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          {
-            name: 'description',
-            content: data.site.siteMetadata.description,
-          },
-          {
-            name: 'keywords',
-            content: data.site.siteMetadata.keywords,
-          },
-          { name: 'author', content: 'Jesse McLean' },
-          { property: 'og:title', content: data.site.siteMetadata.title },
-          { property: 'og:site_name', content: 'Jesse McLean' },
-          { property: 'og:type', content: 'website' },
-          {
-            property: 'og:url',
-            content: 'https://jessemclean.ca/',
-          },
-          {
-            property: 'og:description',
-            content: data.site.siteMetadata.description,
-          },
-        ]}
-        link={[{ rel: 'canonical', href: 'https://jessemclean.ca/' }]}
-      />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      {children()}
-      <Footer />
-    </div>
-  </ThemeProvider>
-)
+class Layout extends React.Component {
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <div>
+          <Helmet
+            title={this.props.data.site.siteMetadata.title}
+            meta={[
+              {
+                name: 'description',
+                content: this.props.data.site.siteMetadata.description,
+              },
+              {
+                name: 'keywords',
+                content: this.props.data.site.siteMetadata.keywords,
+              },
+              { name: 'author', content: 'Jesse McLean' },
+              {
+                property: 'og:title',
+                content: this.props.data.site.siteMetadata.title,
+              },
+              { property: 'og:site_name', content: 'Jesse McLean' },
+              { property: 'og:type', content: 'website' },
+              {
+                property: 'og:url',
+                content: 'https://jessemclean.ca/',
+              },
+              {
+                property: 'og:description',
+                content: this.props.data.site.siteMetadata.description,
+              },
+            ]}
+            link={[{ rel: 'canonical', href: 'https://jessemclean.ca/' }]}
+          />
+          <Header siteTitle={this.props.data.site.siteMetadata.title} />
+          {this.props.children()}
+          <Footer />
+        </div>
+      </ThemeProvider>
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.func,
