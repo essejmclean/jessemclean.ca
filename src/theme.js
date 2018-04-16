@@ -5,10 +5,8 @@ import { readableColor } from 'polished'
 const breakpoints = ['40em', '52em', '68em']
 
 // Colors
-const background = '#000'
 const colors = {
-  background: background,
-  text: readableColor(background),
+  text: '#000',
 }
 
 // Typographic Scale
@@ -26,7 +24,6 @@ const maxWidths = ['40rem', '60rem']
 const easing = 'cubic-bezier(0.23, 1, 0.32, 1)'
 
 const theme = {
-  background,
   breakpoints,
   colors,
   fontSizes,

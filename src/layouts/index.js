@@ -2,25 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectGlobal, ThemeProvider } from 'styled-components'
-import { normalize, readableColor, shade } from 'polished'
+import { normalize, readableColor, shade, parseToRgb } from 'polished'
 import theme from '../theme'
 import { Box } from 'rebass'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-
-const setBody = () => {
-  let time = new Date().getHours()
-  let color = '#fff'
-  if (time < 12) {
-    color = shade(1 - (12 - time) / 12, color)
-  }
-  if (time >= 12) {
-    color = shade(1 - (time - 12) / 12, color)
-  }
-  theme.background = color
-  theme.colors.text = readableColor(color)
-  return color
-}
 
 injectGlobal`
   ${normalize()};
@@ -37,15 +23,35 @@ injectGlobal`
     font-kerning: normal;
   }
   html { font: 100%/1.5 system-ui,-apple-system,BlinkMacSystemFont,SF UI,Helvetica Neue,sans-serif; }
-  body {
-    background-color: ${setBody()};
-  }
 `
 
 class Layout extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      theme: theme,
+    }
+  }
+  setColor = () => {
+    let newTheme = theme
+    let time = new Date().getHours()
+    let color = '#fff'
+    if (time < 12) {
+      color = shade(1 - (12 - time) / 12, color)
+    }
+    if (time >= 12) {
+      color = shade(1 - (time - 12) / 12, color)
+    }
+    document.body.style.background = color
+    newTheme.colors.text = readableColor(color)
+    this.setState({ theme: newTheme })
+  }
+  componentDidMount() {
+    this.setColor()
+  }
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={this.state.theme}>
         <div>
           <Helmet
             title={this.props.data.site.siteMetadata.title}
