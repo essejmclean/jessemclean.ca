@@ -1,7 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { Box } from 'rebass'
 import Wrapper from '../components/Wrapper'
 import Text from '../components/Text'
+import RichText from '../components/RichText'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -27,10 +29,20 @@ export default function Template({
           { property: 'og:description', content: excerpt },
         ]}
       />
-      <Wrapper>
-        <Text maxWidth={0}>{frontmatter.title}</Text>
-        <Text maxWidth={0}>{frontmatter.date}</Text>
-        <Text maxWidth={0} dangerouslySetInnerHTML={{ __html: html }} />
+      <Wrapper is="main">
+        <Box is="header" mb={4}>
+          <Text is="h1" largeSize="true" maxWidth={0}>
+            {frontmatter.title}
+          </Text>
+          <Text fadeColor="true" maxWidth={0}>
+            {frontmatter.date}
+          </Text>
+        </Box>
+        <RichText
+          is="article"
+          maxWidth={0}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </Wrapper>
     </div>
   )

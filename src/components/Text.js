@@ -6,6 +6,7 @@ import { Text as RebassText } from 'rebass'
 
 const Text = RebassText.extend`
   display: block;
+  font-weight: normal;
   font-size: ${props => props.theme.fontSizes[1]}px;
   line-height: ${1 / 0.6};
   color: ${props => props.theme.colors.text};
@@ -41,6 +42,15 @@ const Text = RebassText.extend`
       font-size: ${props => props.theme.fontSizes[0]}px;
       @media only screen and (max-width: 40em) {
         font-size: 12px;
+      }
+    `};
+  ${props =>
+    props.largeSize &&
+    css`
+      font-size: ${props => props.theme.fontSizes[2]}px;
+      line-height: ${4 / 3};
+      @media only screen and (max-width: 40em) {
+        font-size: 24px;
       }
     `};
 `

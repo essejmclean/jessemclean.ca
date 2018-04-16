@@ -11,7 +11,7 @@ const colors = {
 
 // Typographic Scale
 // numbers are converted to px values
-const fontSizes = [13, 19, 28, 62]
+const fontSizes = [13, 19, 28]
 
 // Spacing Scale
 // used for margin and padding
