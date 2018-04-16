@@ -46,7 +46,7 @@ class Layout extends React.Component {
     newTheme.colors.text = readableColor(color)
     this.setState({ theme: newTheme })
   }
-  componentDidMount() {
+  componentWillMount() {
     this.setColor()
   }
   render() {
