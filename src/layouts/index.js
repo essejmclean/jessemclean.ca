@@ -30,6 +30,7 @@ class Layout extends React.Component {
     super(props)
     this.state = {
       theme: theme,
+      colorSet: false,
     }
   }
   setColor = () => {
@@ -44,50 +45,54 @@ class Layout extends React.Component {
     }
     document.body.style.background = color
     newTheme.colors.text = readableColor(color)
-    this.setState({ theme: newTheme })
+    this.setState({ theme: newTheme, colorSet: true })
   }
-  componentWillMount() {
+  componentDidMount() {
     this.setColor()
   }
   render() {
-    return (
-      <ThemeProvider theme={this.state.theme}>
-        <div>
-          <Helmet
-            title={this.props.data.site.siteMetadata.title}
-            meta={[
-              {
-                name: 'description',
-                content: this.props.data.site.siteMetadata.description,
-              },
-              {
-                name: 'keywords',
-                content: this.props.data.site.siteMetadata.keywords,
-              },
-              { name: 'author', content: 'Jesse McLean' },
-              {
-                property: 'og:title',
-                content: this.props.data.site.siteMetadata.title,
-              },
-              { property: 'og:site_name', content: 'Jesse McLean' },
-              { property: 'og:type', content: 'website' },
-              {
-                property: 'og:url',
-                content: 'https://jessemclean.ca/',
-              },
-              {
-                property: 'og:description',
-                content: this.props.data.site.siteMetadata.description,
-              },
-            ]}
-            link={[{ rel: 'canonical', href: 'https://jessemclean.ca/' }]}
-          />
-          <Header siteTitle={this.props.data.site.siteMetadata.title} />
-          {this.props.children()}
-          <Footer />
-        </div>
-      </ThemeProvider>
-    )
+    if (this.state.colorSet) {
+      return (
+        <ThemeProvider theme={this.state.theme}>
+          <div>
+            <Helmet
+              title={this.props.data.site.siteMetadata.title}
+              meta={[
+                {
+                  name: 'description',
+                  content: this.props.data.site.siteMetadata.description,
+                },
+                {
+                  name: 'keywords',
+                  content: this.props.data.site.siteMetadata.keywords,
+                },
+                { name: 'author', content: 'Jesse McLean' },
+                {
+                  property: 'og:title',
+                  content: this.props.data.site.siteMetadata.title,
+                },
+                { property: 'og:site_name', content: 'Jesse McLean' },
+                { property: 'og:type', content: 'website' },
+                {
+                  property: 'og:url',
+                  content: 'https://jessemclean.ca/',
+                },
+                {
+                  property: 'og:description',
+                  content: this.props.data.site.siteMetadata.description,
+                },
+              ]}
+              link={[{ rel: 'canonical', href: 'https://jessemclean.ca/' }]}
+            />
+            <Header siteTitle={this.props.data.site.siteMetadata.title} />
+            {this.props.children()}
+            <Footer />
+          </div>
+        </ThemeProvider>
+      )
+    } else {
+      return null
+    }
   }
 }
 
