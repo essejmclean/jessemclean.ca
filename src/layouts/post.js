@@ -5,11 +5,12 @@ import Text from '../components/Text'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
+  transition,
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html, excerpt } = markdownRemark
   return (
-    <div>
+    <div style={transition && transition.style}>
       <Helmet
         title={frontmatter.title}
         meta={[

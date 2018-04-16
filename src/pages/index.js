@@ -8,13 +8,14 @@ const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
+  transition,
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostItem key={edge.node.id} post={edge.node} />)
 
   return (
-    <div>
+    <div style={transition && transition.style}>
       <Wrapper>
         <Text maxWidth={0}>
           <Link to="/">Jesse McLean</Link>

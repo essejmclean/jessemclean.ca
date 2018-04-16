@@ -23,6 +23,7 @@ injectGlobal`
     font-kerning: normal;
   }
   html { font: 100%/1.5 system-ui,-apple-system,BlinkMacSystemFont,SF UI,Helvetica Neue,sans-serif; }
+  body { transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1); }
 `
 
 class Layout extends React.Component {
