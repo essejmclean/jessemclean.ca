@@ -34,10 +34,7 @@ const Item = props => (
 const Footer = () => (
   <Wrapper is="footer" my={0}>
     <Container>
-      <Text is="span" mr={3} mb={3} fadeColor="true" smallSize="true">
-        © Jesse McLean, unless otherwise noted.
-      </Text>
-      <Connect mb={3}>
+      <Connect mr={3} mb={3}>
         <Item children="Twitter" link="http://twitter.com/essejmclean" />
         <Item children="Instagram" link="http://instagram.com/essejmclean" />
         <Item
@@ -46,6 +43,9 @@ const Footer = () => (
         />
         <Item children="Email" link="mailto:jesse@fieldmedialab.com" />
       </Connect>
+      <Text is="span" mb={3} fadeColor="true" smallSize="true">
+        © Jesse McLean, unless otherwise noted.
+      </Text>
     </Container>
   </Wrapper>
 )

@@ -10,6 +10,9 @@ const Text = RebassText.extend`
   line-height: ${1 / 0.6};
   color: ${props => props.theme.colors.text};
   hyphens: auto;
+  @media only screen and (max-width: 40em) {
+    font-size: 16px;
+  }
 
   a {
     text-decoration: none;
@@ -36,6 +39,9 @@ const Text = RebassText.extend`
     props.smallSize &&
     css`
       font-size: ${props => props.theme.fontSizes[0]}px;
+      @media only screen and (max-width: 40em) {
+        font-size: 12px;
+      }
     `};
 `
 
