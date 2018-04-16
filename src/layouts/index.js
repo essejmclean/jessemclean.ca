@@ -87,7 +87,7 @@ class Layout extends React.Component {
               ]}
               link={[{ rel: 'canonical', href: 'https://jessemclean.ca/' }]}
             />
-            <Header siteTitle={this.props.data.site.siteMetadata.title} />
+            <Header location={this.props.location.pathname} />
             {this.props.children()}
             <Footer />
           </div>

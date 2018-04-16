@@ -1,13 +1,26 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { Flex } from 'rebass'
 import Wrapper from './Wrapper'
 import Text from './Text'
 
-const Header = ({ siteTitle }) => (
+const Header = props => (
   <Wrapper is="header" my={4}>
-    <Text is="span">
-      <Link to="/">JM</Link>
-    </Text>
+    <Flex align="center">
+      <Text
+        is="span"
+        fadeColor={props.location === '/' ? 'true' : undefined}
+        mr={2}
+      >
+        <Link to="/">Writing</Link>
+      </Text>
+      <Text
+        is="span"
+        fadeColor={props.location === '/about' ? 'true' : undefined}
+      >
+        <Link to="/about">About</Link>
+      </Text>
+    </Flex>
   </Wrapper>
 )
 

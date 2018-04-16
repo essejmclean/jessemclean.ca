@@ -31,28 +31,31 @@ const Text = RebassText.extend`
   ${maxWidth};
 
   ${props =>
-    props.fadeColor &&
-    css`
-      color: ${props => rgba(props.theme.colors.text, 1 / 2)};
-    `};
+    props.fadeColor
+      ? css`
+          color: ${props => rgba(props.theme.colors.text, 1 / 2)};
+        `
+      : undefined};
 
   ${props =>
-    props.smallSize &&
-    css`
-      font-size: ${props => props.theme.fontSizes[0]}px;
-      @media only screen and (max-width: 40em) {
-        font-size: 12px;
-      }
-    `};
+    props.smallSize
+      ? css`
+          font-size: ${props => props.theme.fontSizes[0]}px;
+          @media only screen and (max-width: 40em) {
+            font-size: 12px;
+          }
+        `
+      : undefined};
   ${props =>
-    props.largeSize &&
-    css`
-      font-size: ${props => props.theme.fontSizes[2]}px;
-      line-height: ${4 / 3};
-      @media only screen and (max-width: 40em) {
-        font-size: 24px;
-      }
-    `};
+    props.largeSize
+      ? css`
+          font-size: ${props => props.theme.fontSizes[2]}px;
+          line-height: ${4 / 3};
+          @media only screen and (max-width: 40em) {
+            font-size: 24px;
+          }
+        `
+      : undefined};
 `
 
 export default Text

@@ -1,0 +1,21 @@
+---
+path: "/2017/02/the-problem-of-yes/"
+date: "2017-02-19"
+title: "The Problem of Yes"
+---
+
+Over the last couple of months, personal values have been at the forefront of my self reflection. I have been wrestling with which ones I want to intentionally practice and be known for. As I have been sorting this out, it is becoming clearer to me that saying "yes" to opportunities is directly related to the values I choose to live and work by. Each "yes" speaks about what is important to me, or perhaps more accurately, what I am afraid of.
+
+Being young, eager, and lucky enough to be presented with a wealth of opportunities, turning any opportunity down has always struck me as a privilege that I have not yet earned. All my life, I have practiced saying "yes" then figured out how to execute on that promise. It can be a risky play, but it has forced me to learn valuable skills that I would have never acquired, build a company I would have taken years to make, meet people who have changed the course of my life, and slowly discover new things that get me to jump out of bed at 5:30 on a Monday morning. One of the great things about saying "yes" is the measurable outcomes it creates—for example, taking on a new client opens up new networks, increases income, reaffirms that you must be doing _something_ right, and provides a certain level of stability. As a result, "yes" is addicting and is in some ways like a drug that is hard to quit. It also means that I end up saying that three letter word _a lot_; however, like most drugs, at a certain threshold "yes" starts to create more problems than it solves.
+
+Coming to this personal understanding has taken longer than I'd like; however, I am convinced it has never been more important as I take hold of an opportunity I deeply value by moving through the early stages of building a startup. Latching onto every opportunity that came my way marked an ambition, but also fear of the outcome of turning an opportunity down. It was future focused, but for the wrong reasons. All the wisdom I have been mentored on has advised against reactionary responses. Saying "yes" to everything is fundamentally reactionary and more concerned with proving myself than with adhering to personal values and objectives. While taking on many opportunities may open many doors, it is unlikely to open the doors I really care about.
+
+When I take stock of the values that I want to live by, I find they're best summarized by one of my favourite writers, [Frank Chimero](http://www.frankchimero.com):
+
+> ... I believe one of life’s great pleasures comes from making modest things consistently well. If you do this with care, curiosity, and feeling, we’d probably get along.
+
+Years ago, I stumbled across a variation of these words and they have stuck with me as one of the most concise means of describing what I value, especially professionally. The trouble with saying "yes" to countless opportunities is the muddying of these values as care, curiosity, and feeling all suffer the problem of capacity; you can only care, be curious, and have feeling for a certain number of things before they are stretched to the point of irrelevance.
+
+Building a startup that demands a heavy focus on user experience and an intimate understanding of a complex problem, marks the height of my need to not stretch thin my values of care, curiosity, and feeling. It also demands not being afraid to turn other opportunities down. This is challenging, as I am still not certain I have earned that right, but find solace in the fact that I am limiting my reactionary responses and adhering to the values I have today.
+
+As long as I am fortunate enough to have opportunities come my way, many people will still hear me say "yes" to them. What I aim to change is my reasons for making a commitment and an assessment of how each commitment will impact my objectives. A "yes" should be uttered when care, curiosity, and feeling can be meaningfully applied to an opportunity without sacrificing previous commitments. I cannot yet attest to what this looks like in practice, but conventional wisdom has me looking forward to learning. If overcommitment sounds familiar, let's talk about how we can help each other.

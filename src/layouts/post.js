@@ -14,13 +14,16 @@ export default function Template({
   return (
     <div style={transition && transition.style}>
       <Helmet
-        title={frontmatter.title}
+        title={frontmatter.title + ' | Jesse McLean'}
         meta={[
           {
             name: 'description',
             content: excerpt,
           },
-          { property: 'og:title', content: frontmatter.title },
+          {
+            property: 'og:title',
+            content: frontmatter.title + ' | Jesse McLean',
+          },
           { property: 'og:type', content: 'article' },
           {
             property: 'og:url',

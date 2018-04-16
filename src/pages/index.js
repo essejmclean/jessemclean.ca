@@ -18,8 +18,7 @@ const IndexPage = ({
     <div style={transition && transition.style}>
       <Wrapper>
         <Text largeSize="true">
-          <Link to="/">Jesse McLean</Link>
-          &nbsp;is a designer and front-end developer, and co-founder of{' '}
+          Jesse McLean is a designer and front-end developer, and co-founder of{' '}
           <a href="https://fieldmedialab.com" target="_blank">
             Field Media Lab
           </a>, a digital product studio. He's interested in design systems and
@@ -41,7 +40,7 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
             path
             title
           }
