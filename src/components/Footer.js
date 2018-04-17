@@ -44,8 +44,8 @@ const Footer = () => (
         <Item children="Email" link="mailto:jesse@fieldmedialab.com" />
       </Connect>
       <Text is="span" mb={3} fadeColor="true" smallSize="true">
-        © Jesse McLean. Code and design by yours truly. Oh, and this site
-        changes colour based on the time of day.
+        © Jesse McLean. Code and design by yours truly. This site changes colour
+        based on the time of day.
       </Text>
     </Container>
   </Wrapper>
