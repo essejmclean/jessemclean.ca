@@ -6,8 +6,6 @@ title: "Minimum Viable Typography"
 
 I really like typography, and while this opinion could change, I'm of the one that typography is _the_ most important factor in design. I'm upset it took me so long to get a decent grasp on it. I'm far away from a type expert and continually practicing, reading books on the subject, and analysing the work of experts. I have learned a lot that's helped immensely though, most of which is simple and ruled-based. In the subsequent paragraphs you can learn a little about my current process and the tools I use.
 
----
-
 As one of the leading factors in design, typography is still mostly overlooked and misunderstood by the average person, of not fault of their own—it's incredibly complex. I'm of the opinion that most people could improve their design skills tenfold by simply understanding the basics of typography, most of which I think has nothing to do with font selection (so let's get that out of the way first).
 
 ## Font selection
@@ -59,10 +57,11 @@ I recommend using the tools I linked above. Here they are again:
 Some great resources that have helped teach me:
 1. [Donny Truong's Professional Web Typography](https://prowebtype.com)
 2. [Butterick's Practical Typography](https://practicaltypography.com)
-3. [Thinking With Type by Ellen Lupton](http://thinkingwithtype.com)
-4. [The Elements of Typographic Style by Robert Bringhurst](https://www.amazon.ca/Elements-Typographic-Style-Version-4-0/dp/0881792128/ref=pd_lpo_sbs_14_img_1?_encoding=UTF8&psc=1&refRID=S53J4DAYG8689J0QCGT6)
+3. [Ellen Lupton's Thinking With Type](http://thinkingwithtype.com)
+4. [Robert Bringhurst's The Elements of Typographic Style](https://www.amazon.ca/Elements-Typographic-Style-Version-4-0/dp/0881792128/ref=pd_lpo_sbs_14_img_1?_encoding=UTF8&psc=1&refRID=S53J4DAYG8689J0QCGT6)
 
 Some typefaces I really like:
 1. [Inter UI](https://rsms.me/inter/) (open source, use for anything)
 2. [Untitled Sans](http://untitledsans.com)
 3. [GT America](http://gt-america.com)
+4. Apple's native San Francisco
