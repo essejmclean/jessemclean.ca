@@ -1,9 +1,21 @@
 import React from 'react'
+import Helmet from 'react-helmet'
+import Wrapper from '../components/Wrapper'
+import RichText from '../components/RichText'
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+const NotFoundPage = ({transition}) => (
+  <div style={transition && transition.style}>
+    <Helmet
+      title="Page not found | Jesse McLean"
+      meta={[{ property: 'og:title', content: 'Page not found | Jesse McLean' }]}
+    />
+    <Wrapper>
+      <RichText maxWidth={0}>
+        <p>
+          Uh oh! That page isn't here 🤷‍♂️
+        </p>
+      </RichText>
+    </Wrapper>
   </div>
 )
 

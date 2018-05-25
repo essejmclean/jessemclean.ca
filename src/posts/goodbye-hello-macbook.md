@@ -8,6 +8,6 @@ I write this from the keyboard of the MacBook I adopted today. Purchased in the 
 
 Somewhat surprisingly, I'm upset about giving up my old MacBook because, normally, I'm not the sentimental type. It got me through university, is the machine I started my career on, and has been used nearly everyday (honestly) throughout the 6–7 years I've owned it. Honestly, I drove the poor thing into the ground. By the end, I was restarting it a few times a day just to try to refresh the processor and I was beginning to get some bizarre bugs, freezing, and extreme input lag. Why didn't I replace it sooner? I really enjoy getting as much as I can out of my devices. I recently heard the analogy of "using a vise-grip to squeeze a lemon" and I think that perfectly describes the relationship I have with my devices (e.g., had an iPhone 5 for six years before replacing it). 
 
-It's sad to see my old MacBook go. It was **without a doubt** the best purchase I've ever made. Hoping the same can be said of this one.
+It's sad to see my old MacBook go. It was _without a doubt_ the best purchase I've ever made. Hoping the same can be said of this one.
 
 ![Goodbye Old Hello New](/images/goodbye-hello-macbook/goodbye-macbook-hello-macbook.png)

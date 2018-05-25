@@ -16,6 +16,7 @@ const Container = Box.extend`
     border-bottom: 1px solid ${props => rgba(props.theme.colors.text, 1 / 4)};
   }
 
+  @media not all and (hover: none) {
   &:hover {
     .post-item__title {
       transform: translateX(0);
@@ -24,13 +25,14 @@ const Container = Box.extend`
         opacity: 1;
       }
     }
-  }
+  }}
 `
 
 Container.defaultProps = {
   is: Link,
+  pt: 3,
+  pb: 3,
   px: [3, null, 4, 0],
-  py: 2,
   mx: [-3, null, -4, 0],
 }
 
@@ -52,7 +54,7 @@ const Title = Text.extend`
 `
 
 Title.defaultProps = {
-  is: 'span',
+  is: 'span'
 }
 
 const Inline = Flex.extend`

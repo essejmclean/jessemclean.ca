@@ -18,6 +18,12 @@ const RichText = Text.extend`
     margin-top: 0;
     text-indent: ${props => props.theme.space[3]}px;
   }
+  p strong {
+    font-weight: 700;
+  }
+  p em {
+    font-style: italic;
+  }
 
   h1,
   h2,

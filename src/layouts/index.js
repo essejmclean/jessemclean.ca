@@ -40,11 +40,20 @@ class Layout extends React.Component {
     let newTheme = theme
     let time = new Date().getHours()
     let color = '#fff'
-    if (time < 12) {
-      color = shade(1 - (12 - time) / 12, color)
+    if (time < 4) {
+      color = shade(0, color)
     }
-    if (time >= 12) {
-      color = shade(1 - (time - 12) / 12, color)
+    if (time < 9) {
+      color = shade(1 - (9 - time) / 6, color)
+    }
+    if (time >= 9) {
+      color = shade(1, color)
+    }
+    if (time >= 18) {
+      color = shade(1 - (time - 18) / 5, color)
+    }
+    if (time >= 23) {
+      color = shade(0, color)
     }
     document.body.style.background = color
     newTheme.colors.text = readableColor(color)

@@ -22,11 +22,12 @@ const Text = RebassText.extend`
     transition: color 500ms ${props => props.theme.easing},
       box-shadow 500ms ${props => props.theme.easing};
 
+@media not all and (hover: none){
     &:hover {
       color: ${props => rgba(props.theme.colors.text, 1 / 2)};
       box-shadow: inset 0 -1px 0 0 ${props => rgba(props.theme.colors.text, 1 / 1)};
     }
-  }
+  }}
 
   ${maxWidth};
 
