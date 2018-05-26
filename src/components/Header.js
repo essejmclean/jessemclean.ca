@@ -7,17 +7,10 @@ import Text from './Text'
 const Header = props => (
   <Wrapper is="header" my={4}>
     <Flex align="center">
-      <Text
-        is="span"
-        fadeColor={props.location === '/' ? 'true' : undefined}
-        mr={2}
-      >
+      <Text is="span" fade={props.location === '/' ? true : undefined} mr={2}>
         <Link to="/">Writing</Link>
       </Text>
-      <Text
-        is="span"
-        fadeColor={props.location === '/about' ? 'true' : undefined}
-      >
+      <Text is="span" fade={props.location === '/about' ? true : undefined}>
         <Link to="/about">About</Link>
       </Text>
     </Flex>

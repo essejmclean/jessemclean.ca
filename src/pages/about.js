@@ -21,21 +21,25 @@ const About = ({ transition }) => (
           co-founded{' '}
           <a href="https://fieldmedialab.com" target="_blank">
             Field Media Lab
-          </a>, a digital product studio creating modern, reliable and refined software for startups and companies
+          </a>, a digital product studio creating modern, reliable and refined
+          software for startups and companies. I've had the chance to work with
+          companies in finance, retail, technology, architecture, and a number
+          of other sectors. Meeting new people is one of my favourite things
+          about studio work.
         </p>
         <p>
-          In addition to working with clients, we launch our own ventures at
-          Field, such as{' '}
+          I'm also a co-founder of{' '}
           <a href="https://play4them.com" target="_blank">
             Play4Them
-          </a>—a charitable giving platform that has helped raise over
-          $100,000 for local causes.
+          </a>—a charitable giving platform that has helped raise over $100,000
+          for local causes.
         </p>
         <p>
           One of life’s greatest gifts is the opportunity to build simple things
           with care and quality. If you enjoy the outdoors, motorcycles, or fine
           art (yes), let's chat a while.
         </p>
+        <p>Living and working in Calgary.</p>
       </RichText>
     </Wrapper>
   </div>

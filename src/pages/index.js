@@ -17,7 +17,7 @@ const IndexPage = ({
   return (
     <div style={transition && transition.style}>
       <Wrapper>
-        <Text largeSize="true">
+        <Text size="large">
           Jesse McLean is a designer and front-end developer, and co-founder of{' '}
           <a href="https://fieldmedialab.com" target="_blank">
             Field Media Lab

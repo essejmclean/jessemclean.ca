@@ -23,6 +23,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
             }
           }
+          next {
+            frontmatter {
+              path
+            }
+          }
+          previous {
+            frontmatter {
+              path
+            }
+          }
         }
       }
     }
@@ -31,11 +41,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMarkdownRemark.edges.forEach(edge => {
+      console.log(edge)
       createPage({
-        path: node.frontmatter.path,
+        path: edge.node.frontmatter.path,
         component: postLayout,
-        context: {}, // additional data can be passed via context
+        context: {
+          nextPost: edge.next ? edge.next.frontmatter.path : 'n/a',
+          previousPost: edge.previous ? edge.previous.frontmatter.path : 'n/a',
+        }, // additional data can be passed via context
       })
     })
   })

@@ -17,15 +17,16 @@ const Container = Box.extend`
   }
 
   @media not all and (hover: none) {
-  &:hover {
-    .post-item__title {
-      transform: translateX(0);
+    &:hover {
+      .post-item__title {
+        transform: translateX(0);
 
-      &:before {
-        opacity: 1;
+        &:before {
+          opacity: 1;
+        }
       }
     }
-  }}
+  }
 `
 
 Container.defaultProps = {
@@ -54,7 +55,7 @@ const Title = Text.extend`
 `
 
 Title.defaultProps = {
-  is: 'span'
+  is: 'span',
 }
 
 const Inline = Flex.extend`
