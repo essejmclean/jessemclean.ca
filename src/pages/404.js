@@ -1,22 +1,27 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Wrapper from '../components/Wrapper'
-import RichText from '../components/RichText'
+import React from "react"
+import { Link } from "gatsby"
 
-const NotFoundPage = ({transition}) => (
-  <div style={transition && transition.style}>
-    <Helmet
-      title="Page not found | Jesse McLean"
-      meta={[{ property: 'og:title', content: 'Page not found | Jesse McLean' }]}
+import { Box, Heading, Paragraph, SEO, VStack, Wrapper } from "components"
+
+const NotFoundPage = () => (
+  <>
+    <SEO
+      title="Page not found - Field Gatsby Starter"
+      description="Opinionated starter by Field for the Gatsby framework. Using dependencies like Emotion, styled-system, and Polished to deliver high quality and performant interfaces with a great developer experience."
     />
-    <Wrapper>
-      <RichText maxWidth={0}>
-        <p>
-          Uh oh! That page isn't here 🤷‍♂️
-        </p>
-      </RichText>
+    <Wrapper pt={{ _: "layout.5", md: "layout.6" }}>
+      <VStack space={{ _: "layout.5", md: "layout.6" }} dividers={true}>
+        <Heading size={800}>404</Heading>
+        <Paragraph size={600}>
+          This page does not exist.{" "}
+          <Box as={Link} to="/" fontWeight={600} color="brand.primary">
+            Go home
+          </Box>
+          .
+        </Paragraph>
+      </VStack>
     </Wrapper>
-  </div>
+  </>
 )
 
 export default NotFoundPage
